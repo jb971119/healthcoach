@@ -1,0 +1,182 @@
+/* 기본 배경 및 폰트 설정 */
+.app-container {
+  min-height: 100vh;
+  background-color: #020617; /* 깊은 블랙 */
+  color: #f8fafc;
+}
+
+/* 네비게이션 바 디자인 */
+.main-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 80px;
+  background: rgba(2, 6, 23, 0.8); /* 반투명 블랙 */
+  backdrop-filter: blur(15px); /* 유리창 효과 */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 로고 스타일 */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.logo-box {
+  width: 42px;
+  height: 42px;
+  background: #2563eb; /* 블루 */
+  color: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.5rem;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav-logo:hover .logo-box {
+  transform: rotate(10deg) scale(1.1);
+}
+
+.logo-text {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -1px;
+}
+
+/* 중앙 메뉴 */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #94a3b8; /* 차분한 회색 */
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: 0.3s;
+  position: relative;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+  color: #bef264; /* 형광 연두 */
+}
+
+.nav-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #bef264;
+  transition: 0.3s;
+}
+
+.nav-menu a:hover::after, .nav-menu a.active::after {
+  width: 100%;
+}
+
+.admin-link a {
+  font-style: italic;
+  font-size: 0.8rem;
+  opacity: 0.5;
+}
+
+/* 로그인 & 신청 버튼 */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.login-link {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.apply-btn-neon {
+  position: relative;
+  background-color: #bef264; /* 형광 연두 */
+  color: #020617; /* 블랙 */
+  padding: 12px 28px;
+  border-radius: 99px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  text-decoration: none;
+  overflow: hidden;
+  transition: 0.3s;
+  box-shadow: 0 0 20px rgba(190, 242, 100, 0.3);
+}
+
+.apply-btn-neon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(190, 242, 100, 0.5);
+  background-color: white;
+}
+
+/* 버튼 주변 광채 효과 */
+.btn-glow {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.apply-btn-neon:hover .btn-glow {
+  left: 100%;
+}
+
+/* 푸터 디자인 */
+.main-footer {
+  margin-top: 100px;
+  padding: 60px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-content p {
+  color: #475569;
+  font-size: 0.8rem;
+}
+
+.footer-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  color: #334155;
+  font-size: 0.75rem;
+}
